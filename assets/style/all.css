@@ -486,6 +486,28 @@ input {
           -webkit-transition: 0.6s 0.2s;
           -o-transition: 0.6s 0.2s;
           transition: 0.6s 0.2s; }
+    .header .nav-dropdown {
+      position: absolute;
+      left: 0;
+      top: 82px;
+      width: 100%;
+      max-height: 0px;
+      -webkit-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      transition: all 0.8s;
+      overflow: hidden;
+      z-index: 120; }
+      .header .nav-dropdown li a {
+        display: block;
+        background: #aa0601;
+        color: #ffffff;
+        border-top: 1px solid #ffffff;
+        padding: 16px 10px;
+        text-decoration: none; }
+        .header .nav-dropdown li a:hover {
+          background: #8f0400; }
+      .header .nav-dropdown.active {
+        max-height: 228px; }
   .header .burger {
     display: none;
     color: #fff; }
