@@ -1,5 +1,10 @@
-console.log('Hello!');
+$(function () {
 
-$(document).ready(() => {
-  console.log('HesSchool Hello!');
+  $('.burger').on('click', function (e) {
+    console.log(`yes`);
+    e.preventDefault();
+    $('.nav-dropdown').toggleClass('active')
+  })
+
 });
+
