@@ -402,6 +402,39 @@ input {
     width: 8px;
     background-color: #AA0601; }
 
+.pageNumber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  border: 1px solid #555555;
+  width: 100%;
+  max-width: 372px;
+  margin: 0 auto; }
+  .pageNumber a {
+    color: #555555; }
+  .pageNumber-item {
+    padding: 10px;
+    width: 81px; }
+    .pageNumber-item.next {
+      background-color: #F2F2F2; }
+  .pageNumber-num {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% - 162px); }
+    .pageNumber-num li {
+      padding: 10px;
+      width: 100%;
+      border-left: 1px solid #555555;
+      text-align: center; }
+      .pageNumber-num li:last-child {
+        border-right: 1px solid #555555; }
+      .pageNumber-num li.active {
+        background-color: #000; }
+        .pageNumber-num li.active a {
+          color: #fff; }
+
 .header {
   background: #AA0601; }
   .header-box {
@@ -837,6 +870,98 @@ input {
   .map-box-google {
     width: 100%; }
 
+.nav-product {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0; }
+  .nav-product-list {
+    width: calc(100% / 3);
+    border-bottom: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC; }
+    .nav-product-list a {
+      color: #000;
+      text-align: center;
+      font-size: 32px;
+      line-height: 48px;
+      padding: 24px 2px 16px; }
+      .nav-product-list a.active {
+        border-bottom: 8px solid #AA0601; }
+    .nav-product-list:first-child {
+      border-left: 1px solid #DCDCDC; }
+
+.banner-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .banner-product-img {
+    height: 296px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    .banner-product-img.optical-left {
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-1.png?raw=true); }
+    .banner-product-img.optical-right {
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-2.png?raw=true); }
+    .banner-product-img.sunglasses-left {
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-3.png?raw=true); }
+    .banner-product-img.sunglasses-right {
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-4.png?raw=true); }
+
+.product {
+  margin: 80px auto; }
+  .product-title {
+    text-align: center; }
+    .product-title h2 {
+      font-size: 42px;
+      line-height: 63px; }
+    .product-title h3 {
+      font-size: 32px;
+      line-height: 48px; }
+  .product-box {
+    margin-top: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .product-item {
+    width: calc((100% - 72px)/4);
+    margin-bottom: 80px; }
+    .product-item a {
+      color: #000; }
+    .product-item-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .product-item-info h4 {
+        font-size: 24px;
+        line-height: 36px; }
+    .product-item-color {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .product-item-color-item {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        margin-right: 8px; }
+        .product-item-color-item.brown {
+          background-color: #5F3E2D; }
+        .product-item-color-item.origin-dark {
+          background-color: #B75929; }
+
+.sunglasses-product .product-item {
+  width: calc((100% - 48px)/3); }
+
 /*
 desktop -> 992px
 pad -> 768px
@@ -854,7 +979,9 @@ mobile_s -> 320px
       width: 100%;
       max-width: 348px; }
       .classical-card-item:not(:first-child) {
-        margin-top: 24px; } }
+        margin-top: 24px; }
+  .product-item {
+    width: calc((100% - 48px) / 3); } }
 
 @media (max-width: 768px) {
   .footer-nav-item:not(:first-child) {
@@ -893,7 +1020,7 @@ mobile_s -> 320px
       .design-card-item:not(:first-child) {
         margin-top: 24px; }
   .client-card-item {
-    width: calc((100% - 24px)/2);
+    width: calc((100% - 24px) / 2);
     margin-bottom: 24px; }
   .map-box {
     -webkit-box-orient: vertical;
@@ -918,11 +1045,26 @@ mobile_s -> 320px
     .map-box-google {
       height: 414px; }
   .map-card-item {
-    width: calc((100% - 24px)/2); }
-    .map-card-item:not(:nth-child(3n+1)) {
+    width: calc((100% - 24px) / 2); }
+    .map-card-item:not(:nth-child(3n + 1)) {
       margin-left: 0px; }
     .map-card-item:nth-child(even) {
-      margin-left: 24px; } }
+      margin-left: 24px; }
+  .nav-product-list a {
+    font-size: 24px;
+    line-height: 36px; }
+  .banner-product-img.optical-left {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-1.png?raw=true); }
+  .banner-product-img.optical-right {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-2.png?raw=true); }
+  .banner-product-img.sunglasses-left {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-3.png?raw=true); }
+  .banner-product-img.sunglasses-right {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true); }
+  .product-item {
+    width: calc((100% - 24px) / 2); }
+  .sunglasses-product .product-item {
+    width: calc((100% - 24px) / 2); } }
 
 @media (max-width: 615px) {
   .header .nav-item:not(:first-child) {
@@ -1025,7 +1167,44 @@ mobile_s -> 320px
   .map-card-item {
     width: 100%; }
     .map-card-item:nth-child(even) {
-      margin-left: 0px; } }
+      margin-left: 0px; }
+  .nav-product-list a {
+    font-size: 16px;
+    line-height: 24px; }
+  .product {
+    margin: 40px auto; }
+    .product-title h2,
+    .product-title h3 {
+      font-size: 24px;
+      line-height: 36px; }
+    .product-box {
+      margin-top: 32px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .product-item {
+      width: 100%;
+      margin-bottom: 24px; }
+  .sunglasses-product .product-item {
+    width: 100%; }
+  .pageNumber {
+    font-size: 14px; }
+    .pageNumber-item {
+      padding: 8px 4px;
+      max-width: 60px; }
+    .pageNumber-num {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: calc(100% - 120px); }
+      .pageNumber-num li {
+        width: 100%;
+        padding: 8px 4px; } }
 
 @media (max-width: 375px) {
   .header .nav {
