@@ -1,0 +1,8 @@
+.faq-box{
+    margin-top: 24px;
+    margin-bottom: 80px;
+    max-width: 856px;
+    &-item:not(:first-child){
+        margin-top: 32px;
+    }
+}
