@@ -1,0 +1,103 @@
+.nav-product {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    &-list {
+        width: calc(100% / 3);
+        border-bottom: 1px solid $light-gray;
+        border-right: 1px solid $light-gray;
+        a {
+            color: #000;
+            text-align: center;
+            font-size: 32px;
+            line-height: 48px;
+            padding: 24px 2px 16px;
+            &.active {
+                border-bottom: 8px solid $primary;
+            }
+        }
+        &:first-child {
+            border-left: 1px solid $light-gray;
+        }
+    }
+}
+
+.banner-product {
+    display: flex;
+    &-img {
+        height: 296px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &.optical-left {
+            background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-1.png?raw=true);
+        }
+        &.optical-right {
+            background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-2.png?raw=true);
+        }
+        &.sunglasses-left {
+            background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-3.png?raw=true);
+        }
+        &.sunglasses-right {
+            background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-4.png?raw=true);
+        }
+    }
+}
+
+.product{
+    margin: 80px auto;
+    &-title{
+        text-align: center;
+        h2{
+            font-size: 42px;
+            line-height: 63px;
+        }
+        h3{
+            font-size: 32px;
+            line-height: 48px;
+        }
+    }
+    &-box{
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-item{
+        width: calc((100% - 72px)/4);
+        margin-bottom: 80px;
+        a{
+            color: #000;
+        }
+        &-info{
+            display: flex;
+            justify-content: space-between;
+            h4{
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+        &-color{
+            display: flex;
+            &-item{
+                width: 24px;
+                height: 24px;
+                border-radius: 4px;
+                margin-right: 8px;
+                &.brown{
+                    background-color: #5F3E2D;
+                }
+                &.origin-dark{
+                    background-color: #B75929;
+                }
+            }
+        }
+    }
+}
+
+.sunglasses-product{
+    .product-item{
+        width: calc((100% - 48px)/3);
+    }
+}
