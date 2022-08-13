@@ -77,6 +77,9 @@ input {
         &.next{
             background-color: #F2F2F2;
         }
+        &:hover{
+            background: #cdcdcd;
+        }
     }
     &-num{
         display: flex;
@@ -94,6 +97,9 @@ input {
                 a{
                     color: #fff;
                 }
+            }
+            &:hover{
+                background: #cdcdcd;
             }
         }
     }

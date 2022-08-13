@@ -27,6 +27,13 @@ mobile_s -> 320px
 }
 
 @include pad {
+    .weOffer{
+        &-card{
+            &-item{
+                width: calc((100% - 24px)/2);
+            }
+        }
+    }
     .footer {
         &-nav {
             &-item:not(:first-child) {
@@ -132,15 +139,17 @@ mobile_s -> 320px
 
     .product {
         &-item {
-            width: calc((100% - 24px) / 2);
+            width: 100%;
+            margin-bottom: 24px;
         }
     }
 
     .sunglasses-product{
         .product-item{
-            width: calc((100% - 24px) / 2);
+            width: 100%;
         }
     }
+
 }
 
 // 特別調整header
@@ -200,6 +209,7 @@ mobile_s -> 320px
 @include mobile_lg {
     .index-banner {
         background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+        height: calc(70vh - 120px);
         &-info {
             .fz-h3 {
                 font-size: 16px;
@@ -214,6 +224,13 @@ mobile_s -> 320px
     .index-block-title {
         font-size: 24px;
         line-height: 36px;
+    }
+    .weOffer{
+        &-card{
+            &-item{
+                width: 100%;
+            }
+        }
     }
     .footer {
         padding-top: 24px;
@@ -308,18 +325,9 @@ mobile_s -> 320px
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        &-item {
-            width: 100%;
-            margin-bottom: 24px;
-        }
     }
 
 
-    .sunglasses-product{
-        .product-item{
-            width: 100%;
-        }
-    }
 
     // 頁碼
     .pageNumber {
