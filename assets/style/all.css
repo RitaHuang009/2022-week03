@@ -154,10 +154,10 @@ img {
   font-style: italic; }
 
 .container {
-  max-width: 1256px;
+  max-width: 1320px;
   height: auto;
   margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0 12px; }
 
 .w_100 {
   width: 100% !important; }
@@ -418,6 +418,8 @@ input {
     width: 81px; }
     .pageNumber-item.next {
       background-color: #F2F2F2; }
+    .pageNumber-item:hover {
+      background: #cdcdcd; }
   .pageNumber-num {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -434,6 +436,8 @@ input {
         background-color: #000; }
         .pageNumber-num li.active a {
           color: #fff; }
+      .pageNumber-num li:hover {
+        background: #cdcdcd; }
 
 .header {
   background: #AA0601; }
@@ -646,12 +650,13 @@ input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     .weOffer-card-item {
-      width: 285px;
+      width: calc((100% - 72px)/4);
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -869,6 +874,9 @@ input {
   .map-box-info {
     width: 100%;
     margin-right: 24px; }
+    .map-box-info img {
+      -o-object-fit: cover;
+         object-fit: cover; }
   .map-box-address {
     border: 1px solid #00000020;
     padding: 8px 0px 16px; }
@@ -957,6 +965,8 @@ input {
     margin-bottom: 80px; }
     .product-item a {
       color: #000; }
+      .product-item a img {
+        width: 100%; }
     .product-item-info {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1006,6 +1016,8 @@ mobile_s -> 320px
     width: calc((100% - 48px) / 3); } }
 
 @media (max-width: 768px) {
+  .weOffer-card-item {
+    width: calc((100% - 24px)/2); }
   .footer-nav-item:not(:first-child) {
     margin-left: 16px; }
   .footer-social-item:not(:first-child) {
@@ -1084,9 +1096,10 @@ mobile_s -> 320px
   .banner-product-img.sunglasses-right {
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true); }
   .product-item {
-    width: calc((100% - 24px) / 2); }
+    width: 100%;
+    margin-bottom: 24px; }
   .sunglasses-product .product-item {
-    width: calc((100% - 24px) / 2); } }
+    width: 100%; } }
 
 @media (max-width: 615px) {
   .header .nav-item:not(:first-child) {
@@ -1138,7 +1151,8 @@ mobile_s -> 320px
 
 @media (max-width: 414px) {
   .index-banner {
-    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true); }
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+    height: calc(70vh - 120px); }
     .index-banner-info .fz-h3 {
       font-size: 16px;
       line-height: 24px; }
@@ -1148,6 +1162,8 @@ mobile_s -> 320px
   .index-block-title {
     font-size: 24px;
     line-height: 36px; }
+  .weOffer-card-item {
+    width: 100%; }
   .footer {
     padding-top: 24px; }
   .weOffer,
@@ -1209,11 +1225,6 @@ mobile_s -> 320px
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-    .product-item {
-      width: 100%;
-      margin-bottom: 24px; }
-  .sunglasses-product .product-item {
-    width: 100%; }
   .pageNumber {
     font-size: 14px; }
     .pageNumber-item {
